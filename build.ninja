@@ -1,0 +1,13 @@
+# build.ninja
+
+include rules.ninja
+
+cxx = g++
+
+sources = main.cpp calculator.cpp
+objects = main.o calculator.o
+
+build mycalculator: link main.o calculator.o
+
+build main.o: compile main.cpp
+build calculator.o: compile calculator.cpp
